@@ -6,7 +6,7 @@ $BRAT_PASSWORD
 $BRAT_EMAIL
 EOD
 
-chown -R www-data:www-data /bratdata
+chown -R www-data:www-data /var/www/brat/data
 
 # patch the user config with more users
 python /var/www/brat/user_patch.py

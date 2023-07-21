@@ -1,0 +1,21 @@
+version: "3.5"
+
+services:
+  brat:
+    container_name: brat
+    restart: always
+    environment:
+      - BRAT_USERNAME=admin
+      - BRAT_PASSWORD=local
+      - BRAT_EMAIL=admin@local.local
+    build:
+      context: .
+      args:
+        - BRAT_USERNAME=admin
+        - BRAT_PASSWORD=local
+        - BRAT_EMAIL=admin@local.local
+    ports:
+      - "81:80"
+    volumes:
+      - "../data_preparation/privacy_tagger/out/texts/:/var/www/brat/data"
+      - "./bratcfg:/var/www/brat/cfg"
