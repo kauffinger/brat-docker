@@ -17,5 +17,5 @@ services:
     ports:
       - "81:80"
     volumes:
-      - "../data_preparation/privacy_tagger/out/texts/:/var/www/brat/data"
+      - "../code/privacy_tagger/out/texts/:/var/www/brat/data"
       - "./bratcfg:/var/www/brat/cfg"

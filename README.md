@@ -12,7 +12,7 @@ Change the bind mapping of the docker-compose to your data directory
 
 ```yml
 volumes:
-  - "../data_preparation/out:/bratdata"
+  - "../code/out:/bratdata"
 ```
 
 users.json is ready and prefilled with:
